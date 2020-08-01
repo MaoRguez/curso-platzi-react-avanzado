@@ -1,0 +1,24 @@
+{
+  "name": "curso-platzi-react-avanzado",
+  "version": "1.0.0",
+  "description": "¡Sígueme en Youtube! https://www.youtube.com/midudev",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaoRguez/curso-platzi-react-avanzado.git"
+  },
+  "keywords": [],
+  "author": "Mauricio Rodriguez <avila.mauro@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MaoRguez/curso-platzi-react-avanzado/issues"
+  },
+  "homepage": "https://github.com/MaoRguez/curso-platzi-react-avanzado#readme",
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
