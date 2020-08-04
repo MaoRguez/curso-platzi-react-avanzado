@@ -1,28 +1,25 @@
-/* eslint-disable operator-linebreak */
-/* eslint-disable prefer-arrow-callback */
-/* eslint-disable import/prefer-default-export */
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react'
 
-export function useNearScreen() {
-  const element = useRef(null);
-  const [show, setShow] = useState(false);
+export function useNearScreen () {
+  const element = useRef(null)
+  const [show, setShow] = useState(false)
 
   useEffect(function () {
     Promise.resolve(
       typeof window.IntersectionObserver !== 'undefined'
         ? window.IntersectionObserver
-        : import('intersection-observer'),
+        : import('intersection-observer')
     ).then(() => {
       const observer = new window.IntersectionObserver(function (entries) {
-        const { isIntersecting } = entries[0];
+        const { isIntersecting } = entries[0]
         if (isIntersecting) {
-          setShow(true);
-          observer.disconnect();
+          setShow(true)
+          observer.disconnect()
         }
-      });
-      observer.observe(element.current);
-    });
-  }, [element]);
+      })
+      observer.observe(element.current)
+    })
+  }, [element])
 
-  return [show, element];
-};
+  return [show, element]
+}

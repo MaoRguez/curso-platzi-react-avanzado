@@ -1,6 +1,6 @@
 {
 	"version": 2,
-	"name": "petgram-maorguez",
+	"name": "petgram",
 	"builds": [
 		{
 			"use": "@now/static-build",

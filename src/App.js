@@ -1,15 +1,26 @@
-import React from 'react';
-import { ListofCategories } from './components/ListOfCategories/index';
-import { GlobalStyle } from './components/styles/GlobalStyles';
-import { ListOfPhotoCards } from './components/ListOfPhotoCards/index';
-import SvgComponent from './components/Logo/index';
+import React, { Fragment } from 'react'
+import { ListOfCategories } from './components/ListOfCategories'
+import { GlobalStyle } from './styles/GlobalStyles'
+import { ListOfPhotoCards } from './container/ListOfPhotoCards'
+import { Logo } from './components/Logo/index'
+import { PhotoCardWithQuery } from './container/PhotoCardWithQuery'
 
-// eslint-disable-next-line import/prefer-default-export
-export const App = () => (
-  <div>
-    <GlobalStyle />
-    <SvgComponent />
-    <ListofCategories />
-    <ListOfPhotoCards />
-  </div>
-);
+export const App = () => {
+  const urlParams = new window.URLSearchParams(window.location.search)
+  const detailId = urlParams.get('detail')
+
+  return (
+    <div>
+      <GlobalStyle />
+      <Logo />
+      {
+        detailId
+          ? <PhotoCardWithQuery id={detailId} />
+          : <Fragment>
+            <ListOfCategories />
+            <ListOfPhotoCards categoryId={2} />
+          </Fragment>
+      }
+    </div>
+  )
+}
