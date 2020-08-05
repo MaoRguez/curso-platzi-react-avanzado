@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Petgram</title>
+  <link rel="apple-touch-icon" href="/src/assets/icon.png">
+<meta name="theme-color" content="#b1a" /><link rel="manifest" href="/manifest.23a436dfb0ca1f5c1bd82a8f83157a1e.json" /></head>
+<body>
+  <div id="app"></div>
+  <noscript>
+    <h3>Esta app necesita JavaScript para anunciar</h3>
+  </noscript>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(registration => {
+            console.log('SW registrado')
+          })
+          .catch(registrationError => {
+            console.log('SW error', registrationError)
+          })
+      })
+    }
+  </script>
+<script src="/app.bundle.js"></script></body>
+</html>
