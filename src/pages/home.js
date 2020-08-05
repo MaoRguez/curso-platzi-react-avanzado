@@ -1,12 +1,18 @@
-import React, { Fragment} from 'react'
+import React from 'react'
 import { ListOfCategories } from '../components/ListOfCategories'
 import { ListOfPhotoCards } from '../container/ListOfPhotoCards'
+import { Layout } from '../components/Layout/index'
 
-export const Home = ({ categoryId }) => {
+const HomePage = ({ categoryId }) => {
   return (
-    <Fragment>
+    <Layout title='Tu app de fotos de mascotas' subtitle='Con Petgram puedes encontrar fotos
+    de aniles domésticos muy bonitos'>
       <ListOfCategories />
       <ListOfPhotoCards categoryId={categoryId} />
-    </Fragment>
+    </Layout>
   )
 }
+
+export const Home = React.memo(HomePage, (prevProps, props) => {
+  return prevProps.categoryId === props.categoryId
+})
