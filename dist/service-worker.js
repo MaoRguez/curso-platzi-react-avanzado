@@ -113,9 +113,6 @@ define("./service-worker.js",['./workbox-99319794'], function (workbox) { 'use s
     "url": "/1.app.bundle.js",
     "revision": "4ca3b4a24b6e37c7b880551ce6f9ed4a"
   }, {
-    "url": "/icon_1024x1024.22c9f3b2f9c3ca126a8669dc94e8a4ef.png",
-    "revision": "22c9f3b2f9c3ca126a8669dc94e8a4ef"
-  }, {
     "url": "/icon_128x128.6604c172e8ce4af7fbfa57c27d021c51.png",
     "revision": "6604c172e8ce4af7fbfa57c27d021c51"
   }, {
@@ -125,20 +122,14 @@ define("./service-worker.js",['./workbox-99319794'], function (workbox) { 'use s
     "url": "/icon_256x256.ec379c2f555469a2eae002ecb797de61.png",
     "revision": "ec379c2f555469a2eae002ecb797de61"
   }, {
-    "url": "/icon_384x384.1b3dd1daeb0fae568378c939c236d79b.png",
-    "revision": "1b3dd1daeb0fae568378c939c236d79b"
-  }, {
-    "url": "/icon_512x512.6347ff3bd381b29aff5d609e848eb7d9.png",
-    "revision": "6347ff3bd381b29aff5d609e848eb7d9"
-  }, {
     "url": "/icon_96x96.ea8ccf240813799ababb948f696bab65.png",
     "revision": "ea8ccf240813799ababb948f696bab65"
   }, {
     "url": "/index.html",
-    "revision": "477f9a3764f9b75db222c0e638649858"
+    "revision": "752315dd90cf500917b899949d0b1fe0"
   }, {
-    "url": "/manifest.f5ca2b22204cb442a0da1ea5938ff8a4.json",
-    "revision": "f5ca2b22204cb442a0da1ea5938ff8a4"
+    "url": "/manifest.23a436dfb0ca1f5c1bd82a8f83157a1e.json",
+    "revision": "23a436dfb0ca1f5c1bd82a8f83157a1e"
   }], {});
   workbox.registerRoute(/https:\/\/(res.cloudinary.com|images.unsplash.com)/, new workbox.CacheFirst({
     "cacheName": "images",
