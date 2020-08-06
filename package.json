@@ -2,10 +2,10 @@
   "homepage": "https://github.com/MaoRguez/curso-platzi-react-avanzado",
   "name": "curso-platzi-react-avanzado",
   "version": "1.0.0",
-  "description": "¡Sígueme en Youtube! https://www.youtube.com/midudev",
+  "description": "Petgram app de animales",
   "main": "index.js",
   "scripts": {
-    "build": "webpack -p",
+    "build": "webpack",
     "dev": "webpack-dev-server --history-api-fallback",
     "serve:dev": "webpack --mode 'development' && npx serve dist -s",
     "predeploy:": "npm run build",
