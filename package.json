@@ -1,16 +1,15 @@
 {
-  "homepage": "https://github.com/MaoRguez/curso-platzi-react-avanzado/",
+  "homepage": "https://github.com/MaoRguez/curso-platzi-react-avanzado",
   "name": "curso-platzi-react-avanzado",
   "version": "1.0.0",
   "description": "¡Sígueme en Youtube! https://www.youtube.com/midudev",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack -p",
     "dev": "webpack-dev-server --history-api-fallback",
     "serve:dev": "webpack --mode 'development' && npx serve dist -s",
     "predeploy:": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
